@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngFor="let usuario of usuarios">
+      Olá, {{usuario.nome}}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/list">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let usuario of usuarios">
+    <ion-card>
+      <img src="{{usuario.url}}">
+    </ion-card>
+  </ion-item>
+  <ion-button expand="full" href="/cadastro">Atualizar perfil</ion-button>
+
+</ion-content>
